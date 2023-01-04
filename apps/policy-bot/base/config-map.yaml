@@ -4,7 +4,7 @@ metadata:
   name: policy-bot-config
   namespace: policy-bot
 data:
-  policy-bot.yaml: |
+  policy-bot.yml: |
     # Options for the http server
     server:
       # The listen address and port
