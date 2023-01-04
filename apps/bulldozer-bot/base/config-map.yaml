@@ -4,7 +4,7 @@ metadata:
   name: bulldozer-bot-config
   namespace: bulldozer-bot
 data:
-  policy-bot.yml: |
+  bulldozer.yml: |
     server:
       address: "0.0.0.0"
       port: 8080
