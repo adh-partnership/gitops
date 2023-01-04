@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: policy-bot-ingress
+  namespace: policy-bot
+  labels:
+    app: policy-bot
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: policy.infra.alphawhiskey.org
+    http:
+      paths:
+      - backend:
+          service:
+            name: policy-bot
+            port:
+              number: 8080
+        path: /
+        pathType: Prefix
+  tls:
+  - hosts:
+    - policy.infra.alphawhiskey.org
+    secretName: policy-infra-alphawhiskey-org-tls

@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: policy-bot
+  namespace: policy-bot
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: policy-bot
+  template:
+    metadata:
+      labels:
+        app: policy-bot
+    spec:
+      containers:
+      - name: policy-bot
+        image: palantirtechnologies/policy-bot:1.27.3
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+        envFrom:
+        - secretRef:
+            name: policy-bot
+            optional: false
+        volumeMounts:
+        - name: config-map
+          mountPath: /secrets/
+    volumes:
+      - name: config-map
+        configMap:
+          name: api-config

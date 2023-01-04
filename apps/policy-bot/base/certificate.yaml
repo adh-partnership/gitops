@@ -1,0 +1,11 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: policy-infra-alphawhiskey-org-tls
+spec:
+  dnsNames:
+  - policy.infra.alphawhiskey.org
+  issuerRef:
+    kind: ClusterIssuer
+    name: letsencrypt
+  secretName: policy-infra-alphawhiskey-org-tls

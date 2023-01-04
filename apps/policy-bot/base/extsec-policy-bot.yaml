@@ -1,0 +1,16 @@
+apiVersion: external-secrets.io/v1beta1
+kind: ExternalSecret
+metadata:
+  name: policy-bot
+  namespace: policy-bot
+spec:
+  refreshInterval: 1h
+  secretStoreRef:
+    kind: ClusterSecretStore
+    name: gcp-store
+  target:
+    name: policy-bot
+    creationPolicy: Owner
+  dataFrom:
+  - extract:
+      key: policy-bot
