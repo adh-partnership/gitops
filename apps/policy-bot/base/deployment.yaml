@@ -26,7 +26,7 @@ spec:
         volumeMounts:
         - name: config-map
           mountPath: /secrets/
-    volumes:
+      volumes:
       - name: config-map
         configMap:
           name: policy-bot-config
