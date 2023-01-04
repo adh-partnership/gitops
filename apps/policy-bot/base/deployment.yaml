@@ -29,4 +29,4 @@ spec:
     volumes:
       - name: config-map
         configMap:
-          name: api-config
+          name: policy-bot-config
