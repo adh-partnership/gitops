@@ -5,6 +5,7 @@ metadata:
 resources:
 - base/argocd-ingress.yaml
 - base/argocd-rbac-cm.yaml
+- base/argocd-cm.yaml
 - base/cert-manager-ClusterIssuer.yaml
 - base/secret-store.yaml
 - external-secrets/cloudflare-api-token.yaml
