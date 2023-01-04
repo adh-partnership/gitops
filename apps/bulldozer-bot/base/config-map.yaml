@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: bulldozer-bot-config
+  namespace: bulldozer-bot
+data:
+  policy-bot.yml: |
+    server:
+      address: "0.0.0.0"
+      port: 8080
+    logging:
+      text: false
+      level: debug
+
+    github:
+      web_url: "https://github.com"
+      v3_api_url: "https://api.github.com"
+      v4_api_url: "https://api.github.com/graphql"
+
+    options:
+      # The path within repositories to find the bulldozer.yml config file
+      # Can also be set by the BULLDOZER_OPTIONS_CONFIGURATION_PATH environment variable.
+      configuration_path: .bulldozer.yml
+
+      # The name of the application. This will affect the User-Agent header
+      # when making requests to Github.
+      # Can also be set by the BULLDOZER_OPTIONS_APP_NAME environment variable.
+      app_name: adh-bulldozer-bot

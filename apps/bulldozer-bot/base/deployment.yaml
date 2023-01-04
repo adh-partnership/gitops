@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bulldozer-bot
+  namespace: bulldozer-bot
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bulldozer-bot
+  template:
+    metadata:
+      labels:
+        app: bulldozer-bot
+    spec:
+      containers:
+      - name: bulldozer-bot
+        image: palantirtechnologies/bulldozer:1.17.0
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+        envFrom:
+        - secretRef:
+            name: bulldozer-bot
+            optional: false
+        volumeMounts:
+        - name: config-map
+          mountPath: /secrets/
+      volumes:
+      - name: config-map
+        configMap:
+          name: bulldozer-bot-config

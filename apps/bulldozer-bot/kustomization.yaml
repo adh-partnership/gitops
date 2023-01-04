@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+metadata:
+  name: bulldozer-bot
+resources:
+- base/namespace.yaml
+- base/extsec-bulldozer-bot.yaml
+- base/deployment.yaml
+- base/config-map.yaml
+- base/service.yaml
+- base/ingress.yaml
+- base/certificate.yaml
