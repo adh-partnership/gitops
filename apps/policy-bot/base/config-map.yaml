@@ -78,6 +78,8 @@ data:
         # The client secret of the OAuth app associated with the GitHub app. Can
         # also be set by the GITHUB_OAUTH_CLIENT_SECRET environment variable.
         # client_secret: "client_secret"
+    options:
+      hide_branch_name: true
     # Options for user sessions
     sessions:
       # A random string used to sign session cookies. Can also be set by the
