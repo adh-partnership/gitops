@@ -5,8 +5,8 @@ metadata:
   namespace: bulldozer-bot
 spec:
   dnsNames:
-  - bulldozer.infra.alphawhiskey.org
+  - bulldozer.infra.adhp.dev
   issuerRef:
     kind: ClusterIssuer
     name: letsencrypt
-  secretName: bulldozer-infra-alphawhiskey-org-tls
+  secretName: bulldozer-infra-adhp-dev-tls

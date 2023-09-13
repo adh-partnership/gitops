@@ -8,7 +8,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: policy.infra.alphawhiskey.org
+  - host: policy.infra.adhp.dev
     http:
       paths:
       - backend:
@@ -20,5 +20,5 @@ spec:
         pathType: Prefix
   tls:
   - hosts:
-    - policy.infra.alphawhiskey.org
-    secretName: policy-infra-alphawhiskey-org-tls
+    - policy.infra.adhp.dev
+    secretName: policy-infra-adhp-dev-tls

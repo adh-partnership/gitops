@@ -7,7 +7,7 @@ spec:
   refreshInterval: 1h
   secretStoreRef:
     kind: ClusterSecretStore
-    name: gcp-store
+    name: vatsim-gcp-store
   target:
     name: policy-bot
     creationPolicy: Owner

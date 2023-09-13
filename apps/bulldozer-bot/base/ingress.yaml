@@ -8,7 +8,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: bulldozer.infra.alphawhiskey.org
+  - host: bulldozer.infra.adhp.dev
     http:
       paths:
       - backend:
@@ -20,5 +20,5 @@ spec:
         pathType: Prefix
   tls:
   - hosts:
-    - bulldozer.infra.alphawhiskey.org
-    secretName: bulldozer-infra-alphawhiskey-org-tls
+    - bulldozer.infra.adhp.dev
+    secretName: bulldozer-infra-adhp-dev-tls

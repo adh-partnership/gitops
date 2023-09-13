@@ -12,7 +12,7 @@ data:
       port: 8080
       # The public URL, used for URL generation when the server is behind a proxy
       # Can also be set by the POLICYBOT_PUBLIC_URL environment variable.
-      public_url: https://policy.infra.alphawhiskey.org
+      public_url: https://policy.infra.adhp.dev
       # Uncomment the "tls_config" block to enable HTTPS support in the server.
       # The cert and key files must be usable by net/http.ListenAndServeTLS().
       # tls_config:
